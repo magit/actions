@@ -1,0 +1,14 @@
+name: manual-generate
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+      with:
+        path: self
+        fetch-depth: 0
+    - run: git checkout -b melpa
+      shell: bash
+      working-directory: self
+    - run: make texi info html html-dir pdf
+      shell: bash
+      working-directory: self

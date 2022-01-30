@@ -1,0 +1,7 @@
+name: install-emacs
+runs:
+  using: composite
+  steps:
+    - uses: purcell/setup-emacs@master
+      with:
+        version: 27.2

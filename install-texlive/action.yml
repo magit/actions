@@ -1,0 +1,6 @@
+name: install-texlive
+runs:
+  using: composite
+  steps:
+    - run: sudo apt install -y texlive
+      shell: bash

@@ -1,0 +1,10 @@
+name: config
+runs:
+  using: composite
+  steps:
+    - run: git config --global user.name "automatic"
+      shell: bash
+    - run: git config --global user.email no-reply@magit.vc
+      shell: bash
+    - run: git config --global init.defaultBranch master
+      shell: bash

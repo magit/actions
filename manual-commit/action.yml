@@ -1,0 +1,16 @@
+name: manual-commit
+runs:
+  using: composite
+  steps:
+    - run: echo "Currently this is a noop"
+      shell: bash
+      working-directory: self
+#   - run: git add --force docs/*.info docs/dir
+#     shell: bash
+#     working-directory: self
+#   - run: git commit -m "Re-generate manual"
+#     shell: bash
+#     working-directory: self
+#   - run: git push --force origin melpa:melpa
+#     shell: bash
+#     working-directory: self
