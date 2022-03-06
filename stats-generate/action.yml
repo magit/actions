@@ -1,0 +1,11 @@
+name: stats-generate
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+      with:
+        path: self
+        fetch-depth: 0
+    - run: GITSTATS=../../gitstats/gitstats make stats
+      shell: bash
+      working-directory: self

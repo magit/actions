@@ -1,13 +1,17 @@
-## (Opinionated) Github actions to generate and distribute manuals
+## Github actions for use in packages I maintain
 
-These actions are used to generate and publish the manuals for the
-[`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`], [`magit-section`],
-[`transient`] and [`with-editor`] packages.  Maybe this can serve as
-inspiration but because it is tailored to how my manuals are authored
-and distributed, using this unmodified for your own manuals likely
-won't work.  I am aware that this could be done using less boilerplate
-but given certain contrains beyond my control, this is how I prefer to
-do it for now.
+These actions are tailored to how things are done in these packages.  Using them
+unmodified for your own packages likely won't work.  I am aware that this could
+be done using less boilerplate but given certain contrains beyond my control,
+this is how I prefer to do it for now.
+
+## Generate and distribute manuals
+
+Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`], [`magit-section`],
+[`transient`] and [`with-editor`].  Results can be found
+[here](https://magit.vc/manual/) and [here](https://emacsmirror.net/manual/).
+
+Usage:
 
 ```yaml
 name: manual
@@ -33,6 +37,34 @@ jobs:
         uses: magit/actions/manual-commit@main
       - name: Publish manual
         uses: magit/actions/manual-publish@main
+        with:
+          key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
+## Generate and distribute statistics
+
+Used by [`forge`] and [`magit`].  Results can be found
+[here](https://magit.vc/stats/).
+
+Usage:
+
+```yaml
+name: stats
+on:
+  push:
+    branches: master
+jobs:
+  manual:
+    name: "Generate and distribute statistics"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install gitstats
+        uses: magit/actions/install-gitstats@main
+      - name: Generate statistics
+        uses: magit/actions/stats-generate@main
+      - name: Publish statistics
+        uses: magit/actions/stats-publish@main
         with:
           key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -1,0 +1,12 @@
+name: install-gitstats
+runs:
+  using: composite
+  steps:
+    - run: sudo apt update
+      shell: bash
+    - run: sudo apt install -y gnuplot
+      shell: bash
+    - uses: actions/checkout@v2
+      with:
+        repository: hoxu/gitstats
+        path: gitstats
