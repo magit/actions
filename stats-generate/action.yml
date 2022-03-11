@@ -6,6 +6,8 @@ runs:
       with:
         path: self
         fetch-depth: 0
+    - run: sudo timedatectl set-timezone Europe/Zurich
+      shell: bash
     - run: GITSTATS=../../gitstats/gitstats make stats
       shell: bash
       working-directory: self
