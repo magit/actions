@@ -70,6 +70,31 @@ jobs:
           secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
 
+## Generate and distribute page
+
+Used by [emacsair.me], [emacsmirror.net] and [magit.vc].
+
+Usage:
+
+```yaml
+name: publish
+on:
+  push:
+    branches: master
+jobs:
+  manual:
+    name: "Generate and distribute page"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate page
+        uses: magit/actions/page-generate@main
+      - name: Publish page
+        uses: magit/actions/page-publish@main
+        with:
+          key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
 [`borg`]:          https://github.com/emacscollective/borg
 [`epkg`]:          https://github.com/emacscollective/epkg
 [`forge`]:         https://github.com/magit/forge
@@ -78,3 +103,7 @@ jobs:
 [`magit-section`]: https://github.com/magit/magit
 [`transient`]:     https://github.com/magit/transient
 [`with-editor`]:   https://github.com/magit/with-editor
+
+[emacsair.me]:     https://emacsair.me
+[emacsmirror.net]: https://emacsmirror.net
+[magit.vc]:        https://magit.vc
