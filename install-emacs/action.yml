@@ -4,4 +4,4 @@ runs:
   steps:
     - uses: purcell/setup-emacs@master
       with:
-        version: 27.2
+        version: 28.1
