@@ -1,0 +1,50 @@
+# See
+# - https://medium.com/@jamesbrink/envisaged-dockerized-data-visualizations-with-gource-78888b157f7f
+# - https://github.com/utensils/Envisaged
+# - https://github.com/NBprojekt/gource-action
+
+name: gource
+on:
+  push:
+    branches: master
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      # - name: Get avatars
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: magit/magit-gource
+      #     path: assets
+      - name: Generate video
+        uses: nbprojekt/gource-action@v1
+        with:
+          avatars_auto_fetch: true
+          #   or avatars_url: ./assets/magit_avatars
+          #   todo logo_url:
+          gource_title: Borg development
+          # # Generic
+          # gource_seconds_per_day: 0.1
+          # gource_auto_skip_seconds: 0.7
+          # gource_user_scale: 0.7
+          # gource_hide_items: mouse,progress
+          # #   missing: bloom-intensity: 1.4
+          # Magit.vc
+          gource_seconds_per_day: 0.005
+          gource_auto_skip_seconds: 0.035
+          gource_user_scale: 0.7
+          gource_time_scale: 0.5
+          gource_camera_mode: track
+          gource_hide_items: "bloom,date,dirnames,filenames,mouse,progress"
+          gource_background_color: fdf6e3
+          gource_font_color: ff491b
+      - name: Upload video
+        uses: actions/upload-artifact@v2
+        with:
+          name: Gource
+          path: ./gource/gource.mp4

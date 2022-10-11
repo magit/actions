@@ -70,6 +70,8 @@ jobs:
           secret: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
 
+## Generate and distribute gource video
+
 ## Generate and distribute page
 
 Used by [emacsair.me], [emacsmirror.net] and [magit.vc].
