@@ -1,3 +1,6 @@
+TODO validate links
+maybe using https://clementbm.github.io/github%20action/jekyll/link%20checking/2020/05/31/automatically-validate-links-on-jekyll-website.html
+
 ## Github actions for use in packages I maintain
 
 These actions are tailored to how things are done in these packages.  Using them
