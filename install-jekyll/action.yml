@@ -1,0 +1,6 @@
+name: install-jekyll
+runs:
+  using: composite
+  steps:
+    - run: sudo apt install -y jekyll
+      shell: bash

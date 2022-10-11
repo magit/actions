@@ -3,4 +3,6 @@ runs:
   using: composite
   steps:
     - uses: actions/checkout@v2
-    - uses: jerryjvl/jekyll-build-action@v1
+    - name: Generate page
+      run: jekyll build --trace
+      shell: bash
