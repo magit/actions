@@ -5,6 +5,12 @@ unmodified for your own packages likely won't work.  I am aware that this could
 be done using less boilerplate but given certain contrains beyond my control,
 this is how I prefer to do it for now.
 
+## Used third-party actions
+
+- [actions/checkout@v3](https://github.com/actions/checkout)
+- [aws-actions/configure-aws-credentials@v1](https://github.com/aws-actions/configure-aws-credentials)
+- [purcell/setup-emacs@master](https://github.com/purcell/setup-emacs)
+
 ## Generate and distribute manuals
 
 Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`], [`magit-section`],
