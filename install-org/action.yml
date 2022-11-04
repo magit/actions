@@ -2,7 +2,7 @@ name: install-org
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         repository: tarsiiformes/org
         path: org
