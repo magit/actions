@@ -4,7 +4,7 @@ runs:
   steps:
     - run: sudo apt update
       shell: bash
-    - run: sudo apt install -y gnuplot
+    - run: sudo apt install -y gnuplot python2
       shell: bash
     - uses: actions/checkout@v3
       with:
