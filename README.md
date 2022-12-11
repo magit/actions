@@ -50,8 +50,12 @@ jobs:
 
 ## Generate and distribute statistics
 
-Used by [`forge`] and [`magit`].  Results can be found
-[here](https://magit.vc/stats/).
+Generate repository statistics using the aging
+[gitstat](https://github.com/hoxu/gitstats) tool.
+
+Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`],
+[`transient`] and [`with-editor`].  Results can be found
+[here](https://magit.vc/stats/) and [here](https://emacsmirror.net/stats/).
 
 Usage:
 
