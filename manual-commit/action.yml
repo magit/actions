@@ -1,4 +1,5 @@
 name: manual-commit
+permissions: {}
 runs:
   using: composite
   steps:

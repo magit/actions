@@ -1,4 +1,5 @@
 name: install-texlive
+permissions: {}
 runs:
   using: composite
   steps:

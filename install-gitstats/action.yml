@@ -1,4 +1,5 @@
 name: install-gitstats
+permissions: {}
 runs:
   using: composite
   steps:

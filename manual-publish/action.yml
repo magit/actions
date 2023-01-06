@@ -1,4 +1,5 @@
 name: manual-publish
+permissions: {}
 inputs:
   key-id:
     description: aws-access-key-id
