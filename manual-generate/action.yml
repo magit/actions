@@ -7,6 +7,7 @@ runs:
       with:
         path: self
         fetch-depth: 0
+        persist-credentials: false
     - run: git checkout -b melpa
       shell: bash
       working-directory: self

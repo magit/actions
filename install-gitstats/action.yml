@@ -11,3 +11,4 @@ runs:
       with:
         repository: hoxu/gitstats
         path: gitstats
+        persist-credentials: false
