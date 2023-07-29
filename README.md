@@ -1,3 +1,9 @@
+> ----
+>
+> **I now use [emacscollective/workflows](https://github.com/emacscollective/workflows) instead of this.**
+>
+> ----
+
 ## Github actions for use in packages I maintain
 
 These actions are tailored to how things are done in these packages.  Using them
@@ -13,9 +19,9 @@ this is how I prefer to do it for now.
 
 ## Generate and distribute manuals
 
-Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`], [`magit-section`],
+~~Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`], [`magit-section`],
 [`transient`] and [`with-editor`].  Results can be found
-[here](https://magit.vc/manual/) and [here](https://emacsmirror.net/manual/).
+[here](https://magit.vc/manual/) and [here](https://emacsmirror.net/manual/).~~
 
 Usage:
 
@@ -53,9 +59,9 @@ jobs:
 Generate repository statistics using the aging
 [gitstat](https://github.com/hoxu/gitstats) tool.
 
-Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`],
+~~Used by [`borg`], [`epkg`], [`forge`], [`ghub`], [`magit`],
 [`transient`] and [`with-editor`].  Results can be found
-[here](https://magit.vc/stats/) and [here](https://emacsmirror.net/stats/).
+[here](https://magit.vc/stats/) and [here](https://emacsmirror.net/stats/).~~
 
 Usage:
 
@@ -82,7 +88,7 @@ jobs:
 
 ## Generate and distribute page
 
-Used by [emacsair.me], [emacsmirror.net] and [magit.vc].
+~~Used by [emacsair.me], [emacsmirror.net] and [magit.vc].~~
 
 Usage:
 
