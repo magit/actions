@@ -1,8 +1,5 @@
-> ----
->
+> [!IMPORTANT]
 > **I now use [emacscollective/workflows](https://github.com/emacscollective/workflows) instead of this.**
->
-> ----
 
 ## Github actions for use in packages I maintain
 
